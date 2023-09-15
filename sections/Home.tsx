@@ -1,6 +1,5 @@
 "use client";
 
-import { useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -67,7 +66,7 @@ export default function Home() {
           My focus is <span className="font-bold">Fullstack Development</span>{" "}
           of websites and applications with{" "}
           <span className="underline">React (Next.js)</span> and{" "}
-          <span className="underline">serverless (AWS)</span>, with a{" "}
+          <span className="underline">serverless (AWS, Supabase)</span>, with a{" "}
           <span className="font-bold">ML Engineering</span> research internship
           to bring to the table.
         </motion.p>
