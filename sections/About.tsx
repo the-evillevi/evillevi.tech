@@ -1,12 +1,6 @@
 "use client";
 
-import Link from "next/link";
-
-import { motion } from "framer-motion";
-import { BsArrowRight, BsLinkedin, BsGithub } from "react-icons/bs";
-import { HiDownload } from "react-icons/hi";
-
-import Anchor from "@/components/Anchor";
+import SectionHeading from "@/components/SectionHeading";
 import { useSectionInView } from "@/lib/hooks";
 
 export default function About() {
@@ -16,67 +10,41 @@ export default function About() {
     <section
       id="about"
       ref={ref}
-      className="mb-28 max-w-[50rem] scroll-mt-28 text-center sm:mb-0"
+      className="mb-28 max-w-[50rem] scroll-mt-28 text-center leading-8 sm:mb-0"
     >
       <article>
-        <motion.h1
-          initial={{ opacity: 0, y: 100 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.3, duration: 0.6 }}
-          className="mb-10 mt-4 px-4 text-2xl font-medium !leading-[1.5] sm:text-4xl"
-        >
-          About
-        </motion.h1>
-        <motion.p
-          initial={{ opacity: 0, y: 100 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.6, duration: 0.6 }}
-          className="mb-10 mt-4 px-4 text-2xl font-medium !leading-[1.5] sm:text-2xl"
-        >
-          This is some bullshit content so it seems like this page is actually
-          done.
-        </motion.p>
-        <motion.p
-          initial={{ opacity: 0, y: 100 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.9, duration: 0.6 }}
-          className="mb-10 mt-4 px-4 text-2xl font-medium !leading-[1.5] sm:text-2xl"
-        >
-          My focus is <span className="font-bold">Fullstack Development</span>{" "}
-          of websites and applications with{" "}
-          <span className="underline">React (Next.js)</span> and{" "}
-          <span className="underline">serverless (AWS)</span>, with a{" "}
-          <span className="font-bold">ML Engineering</span> research internship
-          to bring to the table.
-        </motion.p>
-      </article>
-
-      <motion.div
-        initial={{ opacity: 0, y: 100 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 1.2, duration: 0.6 }}
-        className="flex flex-col items-center justify-center gap-2 px-4 text-lg font-medium sm:flex-row"
-      >
-        <Link
-          href="#"
-          className="group flex items-center gap-2 rounded-full bg-gray-900 px-7 py-3 text-white outline-none transition hover:scale-110 hover:bg-gray-950 focus:scale-110 active:scale-105"
-        >
-          Contact me here
-          <BsArrowRight className="opacity-70 transition group-hover:translate-x-2" />
-        </Link>
-        <Anchor download href="/CV.pdf">
-          Download CV
-          <HiDownload className="opacity-70 transition group-hover:translate-y-1" />
-        </Anchor>
-        <div className="flex flex-row items-center justify-center gap-2 text-lg font-medium">
-          <Anchor href="">
-            <BsLinkedin className="opacity-70" />
-          </Anchor>
-          <Anchor href="">
-            <BsGithub />
-          </Anchor>
+        <SectionHeading>About</SectionHeading>
+        <div className="mb-10 px-4 text-center sm:px-36">
+          <p className="my-4">
+            With over three years of experience in{" "}
+            <span className="font-semibold">
+              Java, Python 3, JavaScript, TypeScript, React, Next.js, PostgreSQL
+            </span>
+            , and <span className="font-semibold">Git</span>, I've honed my
+            skills to create robust and efficient solutions. Additionally, I've
+            spent two years working with{" "}
+            <span className="font-semibold">C#, NoSQL</span>, and{" "}
+            <span className="font-semibold">Node.js</span>, expanding my
+            expertise. I've also ventured into mobile development with{" "}
+            <span className="font-semibold">React Native</span> and explored
+            frontend innovation with{" "}
+            <span className="font-semibold">Svelte</span> and{" "}
+            <span className="font-semibold">Angular</span>.
+          </p>
+          <p>
+            My passion for data-driven solutions is supported by a solid
+            foundation in{" "}
+            <span className="font-semibold">SciKit Learn, NumPy</span>, and{" "}
+            <span className="font-semibold">Pandas</span>, along with a focus on{" "}
+            <span className="underline">CI/CD</span>. While I'm familiar with
+            various other technologies like{" "}
+            <span className="font-semibold">Apache Spark, Hadoop</span>, and{" "}
+            <span className="font-semibold">Tableau</span>, I'm always eager to
+            embrace new challenges and leverage my diverse skill set for
+            innovative and impactful solutions.
+          </p>
         </div>
-      </motion.div>
+      </article>
     </section>
   );
 }
